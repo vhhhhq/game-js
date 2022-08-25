@@ -1,0 +1,286 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "ELIXIA"; 
+}
+.header {
+    width: 100%;
+    height: 100vh;
+    background: url('https://steamcdn-a.akamaihd.net/steamcommunity/public/images/items/1490890/42623374a875184fea2fe2e4e5c3ffdd00322161.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+.hp {
+    display: flex;
+    justify-content: space-between;
+    gap: 20vh;
+}
+h2{
+    font-family: "ELIXIA"; 
+    cursor: pointer;
+}
+.characteristics{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+}
+
+#name-character-one{
+    display:flex;
+    flex-wrap: wrap;
+    font-size: 70px;
+    color:beige;
+    
+}
+
+#name-character-two{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 70px;
+    color:beige;
+}
+
+.character {
+    width: 90%;
+    height: 30vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+}
+.section {
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center
+}
+.round-number {
+    display: flex;
+    font-size: 50px;
+    color: orange;
+    transition: all 0.5s;
+}
+
+.round-number:hover {
+    font-size: 70px;
+    color:#fff;
+}
+.logo {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 120px;
+}
+.game-character-one{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    transition: width -1s, height -1s;
+    width: 350px;
+    height: 500px;
+}
+
+.game-character-two{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    transition: width 1s, height 1s;
+    width: 350px;
+    height: 500px;
+    
+}
+.game-character-one:hover {
+    width: 370px;
+    height: 520px;
+    cursor: pointer;
+}
+.game-character-two:hover {
+    width: 370px;
+    height: 520px;
+    cursor: pointer;
+}
+.knight{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    font-size: 35px;
+    color:beige;
+}
+
+.boss{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    text-align: right;
+    font-size: 35px;
+    color:beige;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: "ELIXIA"; 
+    margin-top: 100px;
+}
+
+.container button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "ELIXIA"; 
+    font-size: 30px;
+    border: none;
+    border-radius: 15px;
+    font-weight: 600;
+    background-color: #485e77bb;
+    color: beige;
+    width: 15%;
+    height: 7vh;
+}
+
+.container button:hover{
+    width: 17%;
+    height: 8vh;
+    cursor: pointer;
+    background-color: #304044d2;
+}
+
+
+
+.menu-btn {
+    width: 50%;
+	display: flex;
+    justify-content: flex-end;
+    align-items: center;
+	position: absolute;
+	z-index: 2;
+	/* overflow: hidden; */
+}
+.menu-btn span {
+	width: 30px;
+	height: 2px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: rgba(255, 0, 0, 0);
+	transition: all 0.5s;
+}
+.menu-btn span:nth-of-type(2) {
+	top: calc(50% - 5px);
+}
+.menu-btn span:nth-of-type(3) {
+	top: calc(50% + 5px);
+}
+.menu-btn.active span:nth-of-type(1) {
+    display: none;
+  }
+  .menu-btn.active span:nth-of-type(2) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(45deg);  
+  }
+  .menu-btn.active span:nth-of-type(3) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(-45deg); 
+  }
+
+
+.menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 15px;
+    
+	transform: translateX(-100%);
+	transition: transform 0.5s; 
+
+    font-family: "ELIXIA";
+    
+    height: 100vh;
+    margin: 0;
+    background-image: url('https://images3.alphacoders.com/114/1142445.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.menu.active {
+	transform: translateX(0);
+}
+.menu li {
+	list-style-type: none;
+}
+
+
+.container-header {
+    display: flex;
+    width: 90vw;
+}
+.panel {
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 90vh;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+    -webkit-transition: all 700ms ease-in;
+}
+
+.panel h3{
+    font-size: 23px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color:#fff;
+    font-weight: bold;
+    margin: 0;
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+.panel.active {
+    flex: 5;
+}
+
+
+.panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+
+.round-logo-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#roundContainer {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+@font-face {
+    font-family: "ELIXIA"; 
+    
+    src: url("/fonts/Elixia_Free_Font/ELIXIA.ttf") format("truetype"); 
+}
+
+    
